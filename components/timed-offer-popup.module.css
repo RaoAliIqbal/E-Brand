@@ -1,0 +1,25 @@
+.dialog { width: 100%; max-width: none; height: 100dvh; max-height: none; margin: 0; padding: 70px 6vw; border: 0; background: #fff; color: #172033; overflow: auto; scrollbar-width: none; }
+.dialog::-webkit-scrollbar { display: none; }
+.dialog::backdrop { background: #fff; }
+.close { position: fixed; top: 24px; right: 26px; display: grid; place-items: center; width: 44px; height: 44px; border: 0; border-radius: 50%; background: #fff; color: #555; cursor: pointer; }
+.content { width: min(1420px, 100%); min-height: calc(100dvh - 140px); margin: auto; display: flex; flex-direction: column; justify-content: center; text-align: center; }
+.content h2 { margin: 0 0 22px; font-family: var(--font-poppins), Arial, sans-serif; font-size: clamp(34px, 4.7vw, 80px); font-weight: 700; line-height: 1.15; letter-spacing: -.03em; }
+.content em { color: #008d66; }
+.offer { margin: 0; padding-bottom: 25px; border-bottom: 1px solid #e5e5e5; color: #008d66; font-family: Arial, sans-serif; font-size: clamp(23px, 3vw, 51px); line-height: 1.65; }
+.offer strong { display: inline-block; padding: 0 12px; color: #075b43; background: #bdeedc; }
+.intro { margin: 30px 0 40px; font: 22px/1.6 Georgia, serif; }
+.form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)) .78fr; gap: 14px; text-align: left; }
+.form label span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+.form input { width: 100%; min-width: 0; height: 66px; padding: 0 20px; border: 1px solid #aaa; border-radius: 4px; background: #fff; color: #222; font: 17px Georgia, serif; }
+.form input:focus { outline: 2px solid #bdeedc; outline-offset: 2px; border-color: #008d66; }
+.form button, .success button { min-height: 66px; border: 0; border-bottom: 5px solid #bdeedc; border-radius: 999px; background: #008d66; color: #fff; font: bold 19px Georgia, serif; cursor: pointer; }
+.form button:disabled { opacity: .65; cursor: wait; }
+.close:focus-visible, .form button:focus-visible, .success button:focus-visible { outline: 3px solid #008d66; outline-offset: 4px; }
+.error { grid-column: 1/-1; color: #008d66; font-size: 14px; }
+.success { display: grid; justify-items: center; gap: 14px; padding: 28px 0; }
+.success svg { color: #008d66; }
+.success h3, .success p { margin: 0; }
+.success button { padding: 0 30px; }
+@media (max-width: 900px) { .form { grid-template-columns: 1fr 1fr; } .intro { font-size: 18px; margin: 22px 0; } }
+@media (max-width: 540px) { .dialog { padding: 65px 24px 30px; } .content { min-height: calc(100dvh - 95px); } .content h2 { font-size: 34px; margin-bottom: 16px; } .offer { font-size: 25px; padding-bottom: 16px; } .form { grid-template-columns: 1fr; gap: 12px; } .form input, .form button { height: 52px; min-height: 52px; } .close { top: 12px; right: 12px; } }
+@media (max-height: 500px) { .dialog { padding-block: 55px 20px; } .content { min-height: 0; } .content h2 { font-size: 30px; margin-bottom: 10px; } .offer { font-size: 23px; padding-bottom: 8px; } .intro { margin: 12px 0; font-size: 16px; } .form input, .form button { height: 46px; min-height: 46px; } }

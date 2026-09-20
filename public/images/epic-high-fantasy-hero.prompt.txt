@@ -1,0 +1,4 @@
+Generated with the built-in image_gen tool.
+Asset: public/images/epic-high-fantasy-hero.png
+
+Use case: stylized-concept. Asset type: wide website hero background for epic and high fantasy ghostwriting. Create an original cinematic matte painting of an immense ancient mountain kingdom, a luminous stone citadel rising above layered misty valleys, winding river and dramatic distant peaks. Sophisticated realistic fantasy book illustration, atmospheric depth, subtle warm golden dawn against deep forest green and charcoal tones. Wide panoramic composition: architectural focal point on the right half, quieter darker atmospheric landscape on the left for white headline overlay. No text, no lettering, no logos, no watermark. Landscape 1536x1024 or wider.

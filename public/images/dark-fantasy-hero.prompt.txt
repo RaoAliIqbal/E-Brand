@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/dark-fantasy-hero.png
+
+Use case: stylized-concept
+Asset type: wide website hero background for a premium dark fantasy ghostwriting services page
+Primary request: create an original cinematic dark fantasy world that feels sinister, immersive, psychologically tense, and elegant rather than graphic
+Scene/backdrop: ruined black-stone citadel and jagged cathedral towers above a bleak valley, dead forest, low fog, distant storm, faint red moon behind heavy clouds
+Subject: lone cloaked antihero on a ridge facing the corrupted kingdom, small in the composition, with ravens crossing the sky
+Style/medium: sophisticated realistic cinematic matte painting, premium adult dark fantasy book-cover quality, detailed stone and atmospheric depth
+Composition/framing: wide panoramic composition; keep the left half darker and visually quiet for white headline copy, concentrate the citadel, moon, and narrative detail on the right
+Lighting/mood: cold charcoal, desaturated blue-gray, blackened green, restrained crimson accents; fatalistic, melancholic, visceral
+Constraints: no gore, no text, no lettering, no logos, no watermark, no close-up face, no recognizable trademarked character

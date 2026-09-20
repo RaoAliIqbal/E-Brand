@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/urban-fantasy-hero.png
+
+Use case: stylized-concept
+Asset type: wide website hero background for an urban fantasy ghostwriting services page
+Primary request: create an original cinematic modern-city fantasy scene where hidden magic exists beneath ordinary urban life
+Scene/backdrop: rain-slick downtown avenue at blue hour, layered historic stone buildings and modern glass towers, distant elevated train, subtle supernatural energy glowing through alleyways and reflected in wet pavement
+Subject: atmospheric cityscape with faint magical sigils, mist, and one discreet silhouetted figure in a long coat
+Style/medium: sophisticated realistic cinematic concept art, premium fantasy book-cover quality
+Composition/framing: wide panoramic composition; keep the left half darker and visually quiet for white headline copy, concentrate city lights and magical focal detail on the right
+Lighting/mood: moody nocturnal teal, charcoal, and restrained violet with warm amber streetlights; mysterious, fast-paced, contemporary
+Constraints: no text, no lettering, no logos, no watermark, no close-up faces, no recognizable trademarked characters

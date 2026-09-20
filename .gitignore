@@ -1,0 +1,11 @@
+node_modules/
+.next/
+out/
+.env*
+!.env.example
+.vercel/
+*.log
+*.tsbuildinfo
+data/admin-data.json
+data/*.tmp
+data/*.bak

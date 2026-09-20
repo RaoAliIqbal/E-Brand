@@ -1,0 +1,31 @@
+{
+  "name": "storybound-house",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --hostname 0.0.0.0",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "test:enquiries": "node tests/enquiry-flow.test.cjs",
+    "test:security": "node tests/security.test.cjs"
+  },
+  "dependencies": {
+    "@vercel/analytics": "latest",
+    "@vercel/speed-insights": "latest",
+    "lucide-react": "latest",
+    "next": "latest",
+    "nodemailer": "^10.0.10",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@types/node": "latest",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "eslint": "latest",
+    "eslint-config-next": "latest",
+    "typescript": "latest"
+  }
+}

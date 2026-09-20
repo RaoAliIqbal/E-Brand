@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/young-adult-hero.png
+
+Use case: photorealistic-natural
+Asset type: wide website hero background for modern young adult novel ghostwriting services
+Primary request: create an original contemporary young-adult scene that feels authentic, energetic, emotionally immediate, and full of possibility
+Scene/backdrop: urban rooftop gathering at blue hour overlooking a lively modern city, string lights, school notebooks and a skateboard resting near a low wall, subtle summer breeze
+Subject: a diverse group of four older teenagers seen from behind and in profile, sharing a candid moment while one person looks toward the skyline, suggesting friendship, identity, and the threshold of adulthood
+Style/medium: cinematic natural editorial photography, premium contemporary YA book-jacket feel, genuine expressions and realistic clothing
+Composition/framing: wide panoramic composition; keep the left half darker, calm, and uncluttered for white headline copy, place the group and brightest city detail on the right
+Lighting/mood: cobalt blue, warm coral, muted violet, and soft amber string lights; hopeful, current, emotionally honest
+Constraints: subjects should clearly read as older teenagers without school branding; no romanticized glamour, no text, no logos, no watermark, no close-up faces

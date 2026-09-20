@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/magical-realism-hero.png
+
+Use case: stylized-concept
+Asset type: wide website hero background for a literary magical realism novel-writing page
+Primary request: create an original, sophisticated magical realism scene in which one quiet miracle enters an otherwise ordinary world and everyone accepts it naturally
+Scene/backdrop: sun-warmed old town courtyard after a soft rain, modest stucco homes, laundry line, flowering tree, worn stone paving, distant hills
+Subject: hundreds of luminous golden butterflies drifting through the courtyard around an open doorway, one figure calmly carrying groceries as if nothing unusual is happening
+Style/medium: painterly cinematic realism with literary editorial photography sensibility, restrained and emotionally resonant, tactile real-world detail
+Composition/framing: wide panoramic composition; leave the left half calm, darker, and uncluttered for white headline copy, place the flowering tree, doorway, figure, and most butterflies on the right
+Lighting/mood: soft late-afternoon amber, sage green, faded terracotta, dusty blue, gentle wonder, nostalgia, family memory
+Constraints: magic must feel subtle and accepted rather than spectacular; no fantasy costumes, no glowing portals, no text, no logos, no watermark, no close-up faces

@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/mystery-thriller-crime-hero.png
+
+Use case: stylized-concept
+Asset type: wide website hero background for premium mystery, thriller, and crime ghostwriting services
+Primary request: create an original cinematic suspense scene built around investigation, concealed evidence, and imminent danger
+Scene/backdrop: sophisticated private study at night with rain against tall windows, shelves of case files and books, city lights beyond, a desk with scattered photographs, map, fountain pen, evidence envelope, and one overturned glass
+Subject: a lone detective-like silhouette standing near the window while a second ambiguous shadow appears through frosted glass in the distance
+Style/medium: photorealistic cinematic neo-noir editorial image, elegant and intelligent, premium thriller book-jacket atmosphere
+Composition/framing: wide panoramic composition; keep the left half dark and uncluttered for white headline copy, concentrate the evidence desk, window, silhouette, and narrative clues on the right
+Lighting/mood: deep navy, charcoal, muted teal, warm tungsten desk lamp, tense and controlled rather than violent
+Constraints: no visible weapons, no blood, no gore, no readable documents, no text, no lettering, no logos, no watermark, no close-up faces

@@ -1,0 +1,81 @@
+export const servicePages = {
+  fiction: {
+    title: "Fiction Writing Services",
+    description: "Collaborate with an experienced fiction ghostwriter to shape your concept, characters, and plot into an absorbing, publication-ready novel.",
+    eyebrow: "Fiction writing",
+    headline: "Turn the story in your imagination into a novel readers remember.",
+    intro: "From the first spark of an idea to a carefully revised manuscript, our fiction specialists help you develop characters, structure the plot, and preserve the voice that makes your story yours.",
+  },
+  "non-fiction": {
+    title: "Non-Fiction Ghostwriting Services",
+    description: "Transform your knowledge, experience, or life story into an authoritative and engaging non-fiction book.",
+    eyebrow: "Non-fiction writing",
+    headline: "Give your knowledge the structure, clarity, and voice it deserves.",
+    intro: "We help experts, founders, leaders, and memoirists turn lived experience and valuable ideas into clear, compelling books built for the readers they want to reach.",
+  },
+  ghostwriting: {
+    title: "Professional Book Ghostwriting",
+    description: "Confidential book ghostwriting shaped around your ideas, audience, and authentic voice—with complete ownership retained by you.",
+    eyebrow: "Professional ghostwriting",
+    headline: "Your ideas, transformed into a book that sounds unmistakably like you.",
+    intro: "Through thoughtful interviews, research, outlining, and collaborative drafting, we create a polished manuscript while you remain in control of the direction and final word.",
+  },
+  editing: {
+    title: "Book Editing & Proofreading",
+    description: "Developmental editing, line editing, copyediting, and proofreading that make your manuscript clearer, stronger, and publication-ready.",
+    eyebrow: "Editing & proofreading",
+    headline: "Refine every page without losing what makes it yours.",
+    intro: "Our editors strengthen structure, sharpen language, correct inconsistencies, and polish the final details while respecting your intent and individual writing voice.",
+  },
+  publishing: {
+    title: "Book Publishing Assistance",
+    description: "Practical publishing support for authors preparing to release professional print and digital editions.",
+    eyebrow: "Publishing assistance",
+    headline: "Move from finished manuscript to published book with confidence.",
+    intro: "We guide you through formatting, distribution setup, platform requirements, metadata, and launch preparation so every publishing decision is informed and intentional.",
+  },
+  bookcover: {
+    title: "Book Cover Design Services",
+    description: "Distinctive, genre-aware book cover design for professional print, ebook, and audiobook releases.",
+    eyebrow: "Book cover design",
+    headline: "A remarkable book deserves a cover readers cannot overlook.",
+    intro: "Our cover process combines audience research, genre conventions, typography, and original art direction to create a design that is compelling at full size and thumbnail scale.",
+  },
+  marketing: {
+    title: "Book Marketing & Author Branding",
+    description: "Strategic book marketing and author-brand support designed to help the right readers discover your work.",
+    eyebrow: "Book marketing",
+    headline: "Create a thoughtful path from publication to discovery.",
+    intro: "We develop launch messaging, author positioning, campaign assets, and practical promotional plans centered on your goals, audience, and long-term platform.",
+  },
+  packages: {
+    title: "Ghostwriting & Publishing Packages",
+    description: "Explore flexible Storybound House engagements for writing, editing, design, publishing, and book-launch support.",
+    eyebrow: "Flexible engagements",
+    headline: "Choose the level of support your book genuinely needs.",
+    intro: "Every project is different. Our packages establish a clear foundation, then adapt to your manuscript length, research needs, timeline, and publishing goals.",
+  },
+  contact: {
+    title: "Contact Storybound House",
+    description: "Tell Storybound House about your book idea or manuscript and request a confidential introductory consultation.",
+    eyebrow: "Start a conversation",
+    headline: "Every remarkable book begins with a thoughtful conversation.",
+    intro: "Share where you are in the writing journey and what you hope to accomplish. We will recommend a clear, confidential next step for your project.",
+  },
+  terms: {
+    title: "Terms & Conditions",
+    description: "Review the terms governing the Storybound House website, client services, payments, revisions, confidentiality, ownership, and refunds.",
+    eyebrow: "Legal information",
+    headline: "Clear terms for a thoughtful working relationship.",
+    intro: "Understand how our website and client engagements work, including project approvals, payments, revisions, confidentiality, ownership, and refund requests.",
+  },
+  privacy: {
+    title: "Privacy Policy",
+    description: "Learn how Storybound House collects, uses, protects, retains, and shares information received through its website and client projects.",
+    eyebrow: "Privacy information",
+    headline: "Your privacy and confidentiality matter to us.",
+    intro: "Learn what information we collect, why we use it, how project materials remain confidential, and the choices available to you.",
+  },
+} as const;
+
+export type ServiceSlug = keyof typeof servicePages;

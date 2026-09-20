@@ -1,0 +1,47 @@
+import Link from "next/link";
+import { ArrowRight, Check, Heart, Plus } from "lucide-react";
+
+const specialties = [
+  ["01", "Romantic comedy", "Witty banter, unexpected encounters, and playful complications—with a connection that matters beneath the humor."],
+  ["02", "Workplace & billionaire romance", "Ambition, professional boundaries, and differences in power create a setting for carefully developed romantic tension."],
+  ["03", "New adult romance", "Adult characters navigating college, early careers, identity, and the relationships that help shape who they become."],
+  ["04", "Dark romance", "Morally complex adult characters and heightened emotional stakes, with tone, boundaries, and reader expectations defined together."],
+  ["05", "Small-town & blue-collar romance", "Close-knit communities, everyday challenges, and grounded characters finding something extraordinary in familiar places."],
+];
+const steps = [
+  ["Discover your voice", "We explore your premise, characters, intended readers, and preferred tone. From playful banter to a more intimate voice, we discuss what your story should feel like and the level of on-page intimacy you want."],
+  ["Shape the relationship", "An outline connects the first encounter, growing attraction, meaningful obstacles, and an earned resolution. You review the emotional journey and plot direction before the draft takes shape."],
+  ["Develop the draft together", "Chapters arrive in manageable stages so you can respond to the dialogue, chemistry, and pacing. Your feedback guides the writing and keeps the developing manuscript close to your vision."],
+  ["Refine the manuscript", "Revision strengthens character consistency, emotional payoff, and the flow of the prose. We also consider cultural references and continuity, with editorial support defined in your project scope."],
+];
+const faqs = [
+  ["How much does contemporary romance ghostwriting cost?", "Your proposal depends on the target word count, narrative complexity, existing material, and the writing and editorial support you need. Storybound House prepares a tailored scope with clear deliverables and payment terms after discussing your project."],
+  ["How long will it take to write my novel?", "We agree a timeline after reviewing the length, starting point, research needs, and revision scope. The schedule includes opportunities for you to review chapters and share feedback, so your availability is part of the plan."],
+  ["How do you make the voice feel authentic and modern?", "We begin with conversations about your tone and characters, supported by any writing samples you have. Draft reviews help refine the dialogue and inner voices, while recognizable experiences and thoughtful cultural references keep the setting believable."],
+  ["Can I choose the level of intimacy?", "Yes. We discuss your intended audience, boundaries, and preferred level of on-page intimacy before drafting. Whether you want a closed-door courtship, a slow-burn relationship, or a more sensual adult romance, the emotional connection remains central."],
+  ["Will my ideas and our collaboration stay confidential?", "Confidentiality is part of the project agreement. We clarify how your ideas, materials, and manuscript will be handled before the collaboration begins, so you can review the terms and raise any specific requirements."],
+  ["Do you work with other romance genres?", "Storybound House also offers historical and paranormal romance writing support. If your concept crosses genres, share the setting and relationship you have in mind so we can discuss the right approach."],
+  ["What do I need to provide to get started?", "A premise and a sense of what you want to create are enough to begin a conversation. Character notes, an outline, or a partial draft are welcome, but we can also help develop the plot and characters from an early idea."],
+];
+
+export function ContemporaryRomanceOverview() {
+  return (
+    <div className="romanceContent">
+      <section className="romanceIntro romanceWrap" aria-labelledby="contemporary-intro-title">
+        <div><p className="eyebrow">Modern lives. Meaningful connections.</p><h2 id="contemporary-intro-title">Love in the here and now.<br /><em>A story that stays.</em></h2><p className="romanceLead">The best connection on the page feels as real as the world around it.</p><p>At Storybound House, we help turn your ideas into contemporary romance with authentic voices, relatable challenges, and a satisfying emotional journey. From an unexpected meet-cute to a long-awaited second chance, your vision sets the direction.</p><p>Careers, family expectations, digital lives, and personal ambitions all influence how people connect. We weave those pressures into the story with care, giving your characters reasons to grow as well as reasons to fall in love.</p><Link className="fictionTextLink" href="/contact">Tell us about your modern love story <ArrowRight size={17} /></Link></div>
+        <aside className="romanceCraft"><Heart size={30} strokeWidth={1.3} aria-hidden="true" /><p className="eyebrow">The contemporary romance craft</p><h3>Fresh voices.<br />Believable chemistry.</h3>{[["Dialogue with personality", "Natural exchanges and distinct voices that reveal who your characters are."], ["Conflict readers recognize", "Personal stakes, outside pressures, and choices that make the relationship matter."], ["Room for the feelings", "Purposeful pacing that gives attraction, vulnerability, and commitment time to develop."]].map(([title, text]) => <div className="romanceCraftPoint" key={title}><Check size={18} aria-hidden="true" /><div><h4>{title}</h4><p>{text}</p></div></div>)}</aside>
+      </section>
+
+      <section className="romanceSpecialties" aria-labelledby="contemporary-specialties-title"><div className="romanceWrap"><div className="romanceSectionHeading"><p className="eyebrow">Find your kind of chemistry</p><h2 id="contemporary-specialties-title">So many ways to fall in love.</h2><p>We shape the setting, voice, and relationship arc around the contemporary romance you want to write.</p></div><div className="historicalEraGrid">{specialties.map(([number, title, text]) => <article key={title}><span aria-hidden="true">{number}</span><h3>{title}</h3><p>{text}</p></article>)}</div></div></section>
+
+      <section className="romanceProcess romanceWrap" aria-labelledby="contemporary-process-title"><div className="romanceSectionHeading"><p className="eyebrow">Your voice, at every stage</p><h2 id="contemporary-process-title">From the first idea<br />to the final chapter.</h2><p>A clear process keeps the writing collaborative and gives your characters’ relationship space to become something memorable.</p></div><ol className="romanceSteps">{steps.map(([title, text], index) => <li key={title}><span className="romanceStepNumber" aria-hidden="true">0{index + 1}</span><h3>{title}</h3><p>{text}</p></li>)}</ol></section>
+
+      <section className="romanceInvestment romanceWrap" aria-labelledby="contemporary-investment-title"><div><p className="eyebrow">Care for the craft. Clarity for you.</p><h2 id="contemporary-investment-title">A creative partnership.<br /><em>A considered investment.</em></h2><p>A compelling novel takes development, writing, and revision. We build your proposal around the work your manuscript needs, from its first outline to the editorial support agreed for your final draft.</p><Link className="button" href="/contact">Discuss your project <ArrowRight size={17} /></Link></div><div className="romanceScope"><h3>Know what comes next</h3><ul>{["A scope shaped around your manuscript and goals", "Agreed chapter reviews and revision support", "A timeline that makes room for your feedback", "Confidentiality and ownership terms in your agreement", "Clear deliverables and payment terms"].map(text => <li key={text}><Check size={18} aria-hidden="true" />{text}</li>)}</ul></div></section>
+
+      <section className="romanceIntro romanceWrap" aria-labelledby="contemporary-vision-title"><div><p className="eyebrow">Your world. Your characters.</p><h2 id="contemporary-vision-title">A city full of possibility.<br /><em>A small town full of stories.</em></h2></div><div><p className="romanceLead">Wherever your characters find each other, the heart of the story is a connection readers believe.</p><p>Whether your protagonist is building a career in a busy city or starting over in a coastal town, we work with you to give their choices emotional weight. Familiar tropes become a starting point for distinct characters, a personal voice, and a relationship that feels like your own creation.</p></div></section>
+
+      <section className="romanceFaq romanceWrap contemporaryFaq" aria-labelledby="contemporary-faq-title"><div><p className="eyebrow">Before we begin</p><h2 id="contemporary-faq-title">A few answers for<br /><em>your next chapter.</em></h2><p>What to know about developing your contemporary romance with Storybound House.</p></div><div className="romanceQuestions">{faqs.map(([question, answer]) => <details key={question}><summary>{question}<Plus size={18} aria-hidden="true" /></summary><p>{answer}</p></details>)}</div></section>
+      <section className="romanceClosing"><p className="eyebrow">Let’s find the words</p><h2>Your modern love story starts here.</h2><p>Bring a spark, a character, or a chapter. We’ll help you shape what comes next.</p><Link className="button" href="/contact">Start a conversation <ArrowRight size={17} /></Link></section>
+    </div>
+  );
+}

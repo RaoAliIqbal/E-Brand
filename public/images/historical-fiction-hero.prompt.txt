@@ -1,0 +1,12 @@
+Generated with the built-in image generation tool.
+Asset: public/images/historical-fiction-hero.png
+
+Use case: historical-scene
+Asset type: wide website hero background for premium historical fiction ghostwriting services
+Primary request: create an original, emotionally rich historical fiction scene that suggests meticulous research, authentic period detail, and a human story shaped by history
+Scene/backdrop: a 1940s European railway platform at dawn, steam locomotive, period signage without readable words, worn stone station, luggage trunks, soft mist, civilians departing during wartime
+Subject: a woman in an accurate 1940s wool coat holding a sealed letter, seen from behind, watching a departing train; subtle figures in period clothing farther down the platform
+Style/medium: photorealistic cinematic historical drama, restrained prestige-film color grading, richly researched costume and architecture
+Composition/framing: wide panoramic composition; leave the left half darker and relatively uncluttered for white headline copy, place the woman, train, steam, and narrative detail primarily on the right
+Lighting/mood: muted sepia, slate blue, charcoal, soft dawn gold; poignant, authentic, immersive, never nostalgic kitsch
+Constraints: historically plausible materials and clothing, no modern objects, no military insignia, no battle violence, no readable text, no logos, no watermark, no close-up faces

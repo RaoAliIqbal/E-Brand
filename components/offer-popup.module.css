@@ -1,0 +1,119 @@
+.dialog { width: min(1060px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); padding: 0; border: 0; margin: auto; color: white; background: transparent; overflow: auto; overscroll-behavior: contain; font-family: var(--font-poppins), sans-serif; }
+.dialog::backdrop { background: rgb(9 10 19 / 78%); backdrop-filter: blur(6px); }
+.card { position: relative; isolation: isolate; min-height: 710px; padding: 44px 10% 90px 51%; }
+.artwork { z-index: -1; object-fit: fill; pointer-events: none; }
+.saleTag { position: absolute; top: 10px; left: 39%; width: 90px; height: auto; filter: drop-shadow(0 8px 12px #0005); }
+.close { position: absolute; top: 36px; right: 7%; display: grid; place-items: center; width: 38px; height: 38px; padding: 0; border: 1px solid #ffffff70; border-radius: 50%; background: #e92830; color: white; cursor: pointer; }
+.close:hover { background: #bf1724; }
+.content { position: relative; }
+.eyebrow { margin: 0 0 8px; color: #ffe09a; font-size: 10px; font-weight: 600; letter-spacing: .2em; }
+.content h2 { margin: 0 0 17px; color: white; font: 600 clamp(25px, 2.8vw, 34px)/1.18 var(--font-poppins), sans-serif; letter-spacing: -.035em; }
+.offer { display: flex; align-items: center; gap: 15px; margin-bottom: 20px; padding: 0 14px 0 0; border: 1px solid #ffe5a680; border-radius: 12px; background: linear-gradient(110deg, #ffcc2d, #ffe1a9); color: #151746; overflow: hidden; }
+.offer strong { align-self: stretch; display: flex; flex-direction: column; justify-content: center; padding: 7px 13px; background: #ffca08; font-size: 35px; line-height: 1; letter-spacing: -.04em; }
+.offer strong span { margin-top: 3px; font-size: 11px; letter-spacing: .02em; text-align: center; }
+.offer p { margin: 0; font-size: 13px; line-height: 1.5; }
+.offer b { display: block; font-weight: 600; }
+.form { display: grid; gap: 12px; }
+.form label > span { display: block; margin: 0 0 5px 2px; color: #f3eefb; font-size: 11px; font-weight: 500; }
+.form i { color: #ffda84; font-style: normal; }
+.form small { color: #c7bddc; font-size: 10px; font-weight: 400; }
+.field { display: flex; align-items: center; gap: 11px; padding: 0 14px; border: 1px solid #e9e1fa; border-radius: 10px; background: #fff; box-shadow: 0 5px 14px #08051e24; transition: box-shadow .2s, border-color .2s; }
+.field > svg { flex-shrink: 0; color: #81749a; }
+.field:focus-within { border-color: #ffda84; box-shadow: 0 0 0 3px #ffda8438, 0 6px 18px #08051e30; }
+.field:focus-within > svg { color: #59408b; }
+.field input, .field textarea { width: 100%; min-width: 0; border: 0; outline: 0; padding: 13px 0; color: #251d39; background: transparent; font: 12px/1.5 var(--font-poppins), sans-serif; }
+.field input::placeholder, .field textarea::placeholder { color: #898392; opacity: 1; }
+.message { align-items: flex-start; }
+.message > svg { margin-top: 14px; }
+.field textarea { resize: vertical; min-height: 66px; max-height: 150px; }
+.submit, .success button { display: flex; justify-content: center; align-items: center; gap: 12px; width: 100%; min-height: 51px; border: 1px solid #ff6969; border-radius: 999px; color: white; background: linear-gradient(110deg, #f3343d, #db1423); box-shadow: 0 7px 20px #d7172933; font: 600 14px var(--font-poppins), sans-serif; cursor: pointer; }
+.submit:hover { filter: brightness(1.1); }
+.submit:disabled { opacity: .7; cursor: wait; }
+.privacy { display: flex; align-items: center; justify-content: center; gap: 6px; margin: 0; color: #d0c8e1; font-size: 9px; }
+.email { display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 15px; color: white; font-size: 12px; text-decoration: none; }
+.email:hover { text-decoration: underline; }
+.close:focus-visible, .submit:focus-visible, .email:focus-visible, .success button:focus-visible { outline: 3px solid #ffda84; outline-offset: 4px; }
+.error { margin: 0; padding: 9px 12px; border-radius: 8px; background: #fff1f1; color: #a31c2a; font-size: 12px; }
+.success { display: grid; justify-items: center; gap: 18px; padding: 35px 12px; text-align: center; }
+.success > svg { color: #ffda84; }
+.success h3 { margin: 0; font-size: 22px; }
+.success p { margin: 0; color: #e6def1; font-size: 14px; line-height: 1.7; }
+.spinner { animation: spin 1s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+@media (max-width: 900px) {
+  .dialog { width: min(460px, calc(100vw - 24px)); border: 1px solid #ffffff65; border-radius: 24px; background: radial-gradient(ellipse at top left, #63365a, transparent 60%), linear-gradient(145deg, #24216c, #1a0b2c); }
+  .card { min-height: 0; padding: 32px 24px 26px; }
+  .artwork { display: none; }
+  .saleTag { width: 49px; left: auto; right: 65px; top: 0; }
+  .close { top: 14px; right: 14px; width: 34px; height: 34px; }
+  .eyebrow { max-width: 180px; font-size: 8px; }
+  .content h2 { margin-top: 17px; font-size: 27px; }
+  .field input, .field textarea { font-size: 16px; }
+  .offer { margin-bottom: 18px; }
+  .close, .saleTag { z-index: 2; }
+}
+@media (prefers-reduced-motion: reduce) { .spinner { animation: none; } .field { transition: none; } }
+
+
+/* Fit short laptop screens without shrinking text or hiding form controls. */
+.dialog { scrollbar-width: none; }
+.dialog::-webkit-scrollbar { display: none; }
+@media (min-width: 901px) and (max-height: 850px) {
+  .dialog { width: min(980px, calc(100vw - 32px)); }
+  .card { min-height: 0; padding-top: 35px; padding-bottom: 62px; }
+  .content h2 { font-size: 27px; margin-bottom: 10px; }
+  .eyebrow { margin-bottom: 5px; }
+  .offer { margin-bottom: 12px; }
+  .offer strong { font-size: 29px; padding-block: 5px; }
+  .form { gap: 8px; }
+  .field input, .field textarea { padding-block: 9px; }
+  .field textarea { min-height: 52px; }
+  .submit { min-height: 44px; }
+  .email { margin-top: 10px; }
+}
+@media (max-width: 900px) and (max-height: 760px) {
+  .card { padding: 22px 20px 20px; }
+  .content h2 { font-size: 24px; margin: 10px 0; }
+  .offer { margin-bottom: 12px; }
+  .offer strong { font-size: 28px; }
+  .form { gap: 8px; }
+  .field input, .field textarea { padding-block: 9px; }
+  .field textarea { min-height: 54px; }
+  .submit { min-height: 44px; }
+  .email { margin-top: 10px; }
+  .saleTag { display: none; }
+}
+@media (max-height: 590px) and (min-width: 601px) {
+  .dialog { width: min(680px, calc(100vw - 24px)); border-radius: 20px; background: linear-gradient(135deg, #29216c, #1a0b2c); }
+  .card { min-height: 0; padding: 22px 26px; }
+  .artwork, .saleTag { display: none; }
+  .close { top: 14px; right: 14px; z-index: 2; }
+  .content h2 { font-size: 23px; margin-bottom: 8px; }
+  .offer { max-width: 340px; margin-bottom: 12px; }
+  .form { grid-template-columns: 1fr 1fr; gap: 8px 12px; }
+  .submit, .privacy, .error { grid-column: 1 / -1; }
+  .field textarea { min-height: 43px; height: 43px; }
+}
+@media (min-width: 901px) and (min-height: 591px) and (max-height: 700px) {
+  .card { padding-top: 28px; padding-bottom: 48px; }
+  .form { gap: 6px; }
+  .content h2 { font-size: 24px; }
+  .offer { margin-bottom: 8px; }
+  .field input, .field textarea { padding-block: 7px; }
+}
+@media (max-height: 450px) and (min-width: 601px) {
+  .card { padding: 20px 24px 16px; }
+  .eyebrow { display: none; }
+  .content h2 { width: 46%; margin: 0 0 14px; font-size: 19px; }
+  .offer { position: absolute; top: 0; right: 30px; width: 45%; margin: 0; gap: 8px; }
+  .offer strong { font-size: 24px; padding: 5px 10px; }
+  .offer p { font-size: 11px; }
+  .close { top: 8px; right: 8px; width: 28px; height: 28px; }
+  .form { gap: 6px 12px; }
+  .form label > span { margin-bottom: 3px; font-size: 10px; }
+  .field input, .field textarea { padding-block: 6px; }
+  .field textarea { height: 37px; min-height: 37px; }
+  .message > svg { margin-top: 9px; }
+  .submit { min-height: 36px; }
+  .email { margin-top: 7px; }
+}

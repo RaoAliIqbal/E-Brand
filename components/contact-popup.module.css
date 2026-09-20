@@ -1,0 +1,15 @@
+.dialog { width: min(590px, calc(100vw - 24px)); max-width: none; max-height: calc(100dvh - 32px); margin: auto; padding: 0; border: 0; border-radius: 22px; background: #fff; overflow: auto; scrollbar-width: none; }
+.dialog::-webkit-scrollbar { display: none; }
+.dialog::backdrop { background: rgb(6 29 24 / 82%); backdrop-filter: blur(5px); }
+.card { position: relative; }
+.card :global(.contactEnquiryCard) { padding: 30px; border: 0; border-radius: 22px; box-shadow: none; }
+.card :global(.contactEnquiryCard h2) { font-size: 27px; }
+.card :global(.contactEnquiryCard textarea) { min-height: 90px; height: 90px; }
+.card :global(.contactEnquiryCard form) { gap: 13px; }
+.card :global(.contactServiceChoices) { gap: 7px; }
+.close { position: absolute; top: 14px; right: 14px; z-index: 2; display: grid; place-items: center; width: 38px; height: 38px; border: 0; border-radius: 50%; background: #e7f5ef; color: #087459; cursor: pointer; }
+.close:focus-visible { outline: 2px solid #008d66; outline-offset: 3px; }
+@media (max-height: 760px) { .card :global(.contactEnquiryCard) { padding: 22px 28px; } .card :global(.contactCardIcon) { width: 34px; height: 34px; margin-bottom: 12px; } .card :global(.contactEnquiryCard > p) { margin-bottom: 15px; } .card :global(.contactEnquiryCard form) { gap: 9px; } .card :global(.contactEnquiryCard textarea) { height: 74px; min-height: 74px; } }
+@media (max-width: 540px) { .card :global(.contactEnquiryCard) { padding: 24px 20px; } .card :global(.contactEnquiryCard input), .card :global(.contactEnquiryCard textarea) { font-size: 16px; } .card :global(.contactServiceChoices button) { padding: 7px 9px; } }
+
+@media (max-height: 760px) { .card :global(.contactEnquiryCard fieldset) { margin-bottom: 16px; } .card :global(.contactEnquiryCard label) { margin-bottom: 12px; } .card :global(.contactCharacterCount) { margin-bottom: 12px; } }
