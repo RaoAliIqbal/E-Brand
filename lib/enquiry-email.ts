@@ -38,7 +38,7 @@ export async function notifyEnquiry(id: string) {
     host: process.env.SMTP_HOST, port,
     secure: port === 465, requireTLS: port !== 465,
     auth: { user: process.env.SMTP_USER, pass: process.env.SMTP_PASSWORD },
-    connectionTimeout: 10000, greetingTimeout: 10000, socketTimeout: 15000,
+    connectionTimeout: 20000, greetingTimeout: 20000, socketTimeout: 30000,
     disableFileAccess: true, disableUrlAccess: true,
   });
   let outcome: EnquiryEmailNotification;
@@ -53,7 +53,13 @@ export async function notifyEnquiry(id: string) {
     const acceptedRecipients = [...new Set([...notification.acceptedRecipients, ...accepted.filter(value => ENQUIRY_RECIPIENTS.some(email => email === value))])];
     const complete = ENQUIRY_RECIPIENTS.every(email => acceptedRecipients.includes(email));
     outcome = { ...notification, acceptedRecipients, status: complete ? "sent" : "partial", ...(complete ? { sentAt: new Date().toISOString() } : { error: "Some recipients were not accepted by the mail server. Retry to notify the remaining addresses." }) };
-  } catch {
+  } catch (error) {
+    const smtpError = error as { code?: string; command?: string; responseCode?: number };
+    console.error("Enquiry SMTP notification failed", {
+      code: smtpError.code || "unknown",
+      command: smtpError.command || "unknown",
+      responseCode: smtpError.responseCode || null,
+    });
     outcome = { ...notification, status: notification.acceptedRecipients.length ? "partial" : "failed", error: "The mail server could not confirm the notification. Check SMTP settings and retry; if the connection timed out, a recipient may already have received it." };
   } finally { transport.close(); }
   await updateEnquiryEmail(id, outcome);
