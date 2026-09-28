@@ -43,7 +43,7 @@ export function TimedOfferPopup() {
       tryOpen();
     }
     function closed() {
-      if (!submitted.current) schedule(20000);
+      if (!submitted.current) schedule(30000);
     }
     schedule(15000);
     const observer = new MutationObserver(tryOpen);
