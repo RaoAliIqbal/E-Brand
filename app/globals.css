@@ -898,7 +898,7 @@ h1 em { color: #00996d; font-weight: 700; }
 
 .siteFooter { min-height: 690px; position: relative; overflow: hidden; color: #fff; background: #090d0d url('/images/faq-footer/footer-background.png') center / cover no-repeat; }
 .siteFooter::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,8,9,.2), rgba(5,8,9,0)); pointer-events: none; }
-.footerInner { position: relative; z-index: 1; width: min(1540px, calc(100% - 80px)); min-height: 690px; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; padding: 78px 0 56px 100px; }
+.footerInner { position: relative; z-index: 1; width: min(1540px, calc(100% - 80px)); min-height: 690px; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; padding: 78px 0 130px 100px; }
 .footerContact > p, .footerContact h2 { margin: 0; font-family: var(--font-poppins), "Poppins", sans-serif; font-size: 28px; font-weight: 400; line-height: 1.25; text-transform: uppercase; }
 .footerContactButton { margin-top: 20px; min-height: 52px; display: inline-flex; align-items: center; padding: 0 24px; border: 0; color: #fff; background: var(--gold); font-family: var(--font-poppins), "Poppins", sans-serif; font-size: 12px; font-weight: 700; text-transform: uppercase; cursor: pointer; }
 .footerEmail { margin-top: 24px; display: flex; align-items: center; gap: 10px; color: #fff; font-family: var(--font-poppins), "Poppins", sans-serif; font-size: 15px; }
@@ -1640,7 +1640,7 @@ h1 em { color: #00996d; font-weight: 700; }
   .distributionHeading h2 { font-size: 14px; white-space: nowrap; }
   .distributionLogoSet { gap: 35px; padding-right: 35px; }
   .siteFooter { min-height: 650px; background-position: 65% center; }
-  .footerInner { width: calc(100% - 44px); min-height: 650px; padding: 55px 0 38px; }
+  .footerInner { width: calc(100% - 44px); min-height: 650px; padding: 55px 0 140px; }
   .footerContact > p, .footerContact h2 { font-size: 23px; }
   .innerHero { min-height: 560px; padding: 70px 22px; }
   .pagePromise { grid-template-columns: 1fr; gap: 16px; padding: 25px 22px; }
