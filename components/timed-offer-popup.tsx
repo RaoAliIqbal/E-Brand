@@ -25,6 +25,7 @@ export function TimedOfferPopup() {
     if (!element) return;
     let due = false;
     let timer = 0;
+    let dismissals = 0;
     function schedule(delay: number) {
       window.clearTimeout(timer);
       due = false;
@@ -43,7 +44,10 @@ export function TimedOfferPopup() {
       tryOpen();
     }
     function closed() {
-      if (!submitted.current) schedule(30000);
+      if (!submitted.current) {
+        dismissals += 1;
+        schedule(dismissals * 30000);
+      }
     }
     schedule(15000);
     const observer = new MutationObserver(tryOpen);

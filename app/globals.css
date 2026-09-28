@@ -661,6 +661,7 @@ nav a:hover::after, nav a:focus-visible::after { transform: scaleX(1); }
 .button:hover { color: white; background: var(--ink); border-color: var(--ink); transform: translateY(-2px); }
 .buttonSmall { min-height: 42px; padding: 0 19px; }
 .menuButton { display: none; border: 0; background: none; color: var(--ink); }
+.siteHeader .mobileNavigation { display: none; }
 
 .hero { min-height: 650px; position: relative; isolation: isolate; overflow: hidden; background: #fff; }
 .heroImage { position: absolute; inset: 0; z-index: -3; }
@@ -1513,6 +1514,27 @@ h1 em { color: #00996d; font-weight: 700; }
 @media (max-width: 1100px) {
   nav { display: none; }
   .menuButton { display: block; }
+  .siteHeader .mobileNavigation.isOpen {
+    position: absolute; top: 100%; right: 0; left: 0; display: block; width: 100%;
+    max-height: calc(100dvh - 78px); margin: 0; padding: 10px 18px 130px;
+    overflow-y: auto; overscroll-behavior: contain; background: #fffdf8;
+    border-top: 1px solid #e6e5df; box-shadow: 0 18px 32px rgba(16,24,39,.18);
+  }
+  .mobileNavigation a, .mobileNavigation summary {
+    min-height: 48px; display: flex; align-items: center; justify-content: space-between;
+    width: 100%; padding: 10px 4px; border-bottom: 1px solid #e8e8e2;
+    color: var(--ink-deep); font-size: 14px; font-weight: 600;
+  }
+  .mobileNavigation a::after { display: none; }
+  .mobileNavigation a:hover { transform: none; }
+  .mobileNavigation summary { list-style: none; cursor: pointer; }
+  .mobileNavigation summary::-webkit-details-marker { display: none; }
+  .mobileNavigation details[open] > summary svg { transform: rotate(180deg); }
+  .mobileNavSubmenu { padding: 2px 0 8px 16px; }
+  .mobileNavSubmenu a, .mobileNavSubmenu summary { min-height: 42px; font-size: 13px; font-weight: 500; }
+  .mobileNavNested { padding-left: 14px; }
+  .menuButton { flex: 0 0 auto; display: grid; place-items: center; width: 44px; height: 44px; cursor: pointer; }
+  .menuButton:focus-visible, .mobileNavigation a:focus-visible, .mobileNavigation summary:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
   .headerActions { margin-left: auto; }
   .heroContent { width: 64vw; padding-left: 6vw; }
   .reviewTrust { grid-template-columns: 1fr; gap: 22px; }

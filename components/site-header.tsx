@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ChevronDown, ChevronRight, Menu } from "lucide-react";
+import { ChevronDown, ChevronRight, Menu, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { fictionGenres } from "@/lib/fiction-genres";
 import { fantasySubgenres, ghostwritingSpecialties, nonFictionTopics, romanceSubgenres } from "@/lib/service-submenus";
@@ -21,6 +21,7 @@ export const navigation = [
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     const updateHeader = () => setScrolled(window.scrollY > 70);
@@ -28,6 +29,25 @@ export function SiteHeader() {
     window.addEventListener("scroll", updateHeader, { passive: true });
     return () => window.removeEventListener("scroll", updateHeader);
   }, []);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setMenuOpen(false);
+    };
+    const closeOnDesktop = (event: MediaQueryListEvent) => {
+      if (event.matches) setMenuOpen(false);
+    };
+    const desktop = window.matchMedia("(min-width: 1101px)");
+    window.addEventListener("keydown", closeOnEscape);
+    desktop.addEventListener("change", closeOnDesktop);
+    return () => {
+      window.removeEventListener("keydown", closeOnEscape);
+      desktop.removeEventListener("change", closeOnDesktop);
+    };
+  }, [menuOpen]);
+
+  const closeMenu = () => setMenuOpen(false);
 
   return (
     <>
@@ -79,7 +99,52 @@ export function SiteHeader() {
           ) : <Link href={item.href} key={item.href}>{item.label}</Link>)}
         </nav>
 
-        <button className="menuButton" aria-label="Open navigation menu"><Menu /></button>
+        <button
+          className="menuButton"
+          type="button"
+          aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"}
+          aria-controls="mobile-navigation"
+          aria-expanded={menuOpen}
+          onClick={() => setMenuOpen(open => !open)}
+        >
+          {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
+        </button>
+
+        <nav id="mobile-navigation" className={`mobileNavigation${menuOpen ? " isOpen" : ""}`} aria-label="Mobile navigation">
+          <details>
+            <summary>Fiction <ChevronDown size={16} aria-hidden="true" /></summary>
+            <div className="mobileNavSubmenu">
+              <Link href="/fiction" onClick={closeMenu}>All Fiction</Link>
+              {fictionGenres.map(genre => {
+                const children = genre.slug === "romance" ? romanceSubgenres : genre.slug === "fantasy" ? fantasySubgenres : null;
+                return children ? (
+                  <details key={genre.slug}>
+                    <summary>{genre.label}<ChevronDown size={15} aria-hidden="true" /></summary>
+                    <div className="mobileNavSubmenu mobileNavNested">
+                      <Link href={`/fiction/${genre.slug}`} onClick={closeMenu}>Explore {genre.label}</Link>
+                      {children.map(child => <Link href={`/fiction/${genre.slug}/${child.slug}`} key={child.slug} onClick={closeMenu}>{child.label}</Link>)}
+                    </div>
+                  </details>
+                ) : <Link href={`/fiction/${genre.slug}`} key={genre.slug} onClick={closeMenu}>{genre.label}</Link>;
+              })}
+            </div>
+          </details>
+          <details>
+            <summary>Non-Fiction <ChevronDown size={16} aria-hidden="true" /></summary>
+            <div className="mobileNavSubmenu">
+              <Link href="/non-fiction" onClick={closeMenu}>All Non-Fiction</Link>
+              {nonFictionTopics.map(topic => <Link href={`/non-fiction/${topic.slug}`} key={topic.slug} onClick={closeMenu}>{topic.label}</Link>)}
+            </div>
+          </details>
+          <details>
+            <summary>Ghostwriting <ChevronDown size={16} aria-hidden="true" /></summary>
+            <div className="mobileNavSubmenu">
+              <Link href="/ghostwriting" onClick={closeMenu}>All Ghostwriting</Link>
+              {ghostwritingSpecialties.map(specialty => <Link href={`/ghostwriting/${specialty.slug}`} key={specialty.slug} onClick={closeMenu}>{specialty.label}</Link>)}
+            </div>
+          </details>
+          {navigation.slice(3).map(item => <Link href={item.href} key={item.href} onClick={closeMenu}>{item.label}</Link>)}
+        </nav>
       </header>
     </>
   );
