@@ -37,7 +37,7 @@ The admin dashboard shows popup enquiries in the dedicated **70% discount custom
 
 The right-side tabs switch between Popup enquiries (70% offers), **85% discount entries**, Lead inbox, and Live activity (analytics, active visitors, and paginated recent page views). On narrow screens the menu moves above the content.
 
-The 85% offer appears after 15 seconds on each public-page visit. After dismissal it reopens after 20 seconds on the same page; submitting successfully stops automatic reopening for that page visit. It waits while another dialog is open or the page is hidden and is excluded from admin pages. The sticky footer’s Activate your coupon now button opens it immediately. Requests are saved under `ghostwriting-85-off`; no automatic coupon email is sent by this implementation.
+The 85% offer appears after 15 seconds on each public-page visit. After dismissal it reopens after 30 seconds on the same page, repeating at the same interval after each dismissal; submitting successfully stops automatic reopening for that page visit. It waits while another dialog is open or the page is hidden and is excluded from admin pages. The sticky footer’s Activate your coupon now button opens it immediately. Requests are saved under `ghostwriting-85-off`; no automatic coupon email is sent by this implementation.
 
 ## Visitor location and last IP
 
