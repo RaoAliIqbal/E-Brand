@@ -41,3 +41,10 @@
 .adminEmailNotification p { margin: 0; }
 .adminEmailNotification button { justify-self: start; border: 1px solid #008d66; border-radius: 7px; padding: 7px 10px; background: #ecf6f2; color: #087459; cursor: pointer; }
 .adminEmailNotification button:disabled { opacity: .6; cursor: wait; }
+
+.adminPasswordField { display: grid; gap: 7px; font-size: 13px; font-weight: 700; }
+.adminPasswordInput { position: relative; }
+.adminPasswordInput input { box-sizing: border-box; width: 100%; padding-right: 56px; }
+.adminLoginCard .adminPasswordToggle { position: absolute; top: 3px; right: 3px; display: grid; place-items: center; width: 44px; height: 44px; padding: 0; border: 0; border-radius: 9px; background: transparent; color: #64706c; }
+.adminLoginCard .adminPasswordToggle:hover { background: #eaf6f1; color: #008d66; }
+.adminLoginCard .adminPasswordToggle:focus-visible { outline: 2px solid #008d66; outline-offset: 1px; }
