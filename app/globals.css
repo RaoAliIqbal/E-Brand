@@ -1594,6 +1594,7 @@ h1 em { color: #00996d; font-weight: 700; }
   .heroShade { background: linear-gradient(180deg, #fff 0%, #fff 43%, rgba(255,255,255,.66) 58%, rgba(255,255,255,.04) 78%); }
   .heroContent { width: 100%; padding: 64px 22px 330px; }
   h1 { font-size: clamp(45px, 13vw, 62px); }
+  .heroContent h1 { font-size: 40px; }
   .heroCopy { font-size: 13px; line-height: 1.7; }
   .heroActions { align-items: flex-start; flex-direction: column; gap: 12px; }
   .trustList { display: none; }
