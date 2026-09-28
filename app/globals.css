@@ -1581,6 +1581,7 @@ h1 em { color: #00996d; font-weight: 700; }
 }
 
 @media (max-width: 760px) {
+  p.eyebrow::before { display: none; }
   .announcement { letter-spacing: .1em; text-align: center; }
   .announcement p { gap: 8px; }
   .siteHeader { height: 78px; padding: 0 18px; gap: 10px; }
