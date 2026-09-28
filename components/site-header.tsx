@@ -110,7 +110,14 @@ export function SiteHeader() {
           {menuOpen ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}
         </button>
 
-        <nav id="mobile-navigation" className={`mobileNavigation${menuOpen ? " isOpen" : ""}`} aria-label="Mobile navigation">
+        <nav
+          id="mobile-navigation"
+          className={`mobileNavigation${menuOpen ? " isOpen" : ""}`}
+          aria-label="Mobile navigation"
+          data-lenis-prevent=""
+          onWheel={event => event.stopPropagation()}
+          onTouchMove={event => event.stopPropagation()}
+        >
           <details>
             <summary>Fiction <ChevronDown size={16} aria-hidden="true" /></summary>
             <div className="mobileNavSubmenu">

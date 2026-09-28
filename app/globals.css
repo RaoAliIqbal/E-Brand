@@ -897,7 +897,7 @@ h1 em { color: #00996d; font-weight: 700; }
 .distributionLogo strong i { font-size: 28px; font-style: normal; }
 @keyframes distributionMarquee { to { transform: translateX(-50%); } }
 
-.siteFooter { min-height: 690px; position: relative; overflow: hidden; color: #fff; background: #090d0d url('/images/faq-footer/footer-background.png') center / cover no-repeat; }
+.siteFooter { min-height: 690px; position: relative; overflow: hidden; color: #fff; background: #090d0d url('/images/faq-footer/footer-background.png') 52% center / cover no-repeat; }
 .siteFooter::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, rgba(5,8,9,.2), rgba(5,8,9,0)); pointer-events: none; }
 .footerInner { position: relative; z-index: 1; width: min(1540px, calc(100% - 80px)); min-height: 690px; margin: 0 auto; display: flex; flex-direction: column; justify-content: space-between; padding: 78px 0 130px 100px; }
 .footerContact > p, .footerContact h2 { margin: 0; font-family: var(--font-poppins), "Poppins", sans-serif; font-size: 28px; font-weight: 400; line-height: 1.25; text-transform: uppercase; }
@@ -1512,12 +1512,14 @@ h1 em { color: #00996d; font-weight: 700; }
 }
 
 @media (max-width: 1100px) {
+  html:has(.mobileNavigation.isOpen) { overflow: hidden; }
   nav { display: none; }
   .menuButton { display: block; }
   .siteHeader .mobileNavigation.isOpen {
     position: absolute; top: 100%; right: 0; left: 0; display: block; width: 100%;
     max-height: calc(100dvh - 78px); margin: 0; padding: 10px 18px 130px;
-    overflow-y: auto; overscroll-behavior: contain; background: #fffdf8;
+    overflow-y: auto; overscroll-behavior: contain; touch-action: pan-y;
+    -webkit-overflow-scrolling: touch; background: #fffdf8;
     border-top: 1px solid #e6e5df; box-shadow: 0 18px 32px rgba(16,24,39,.18);
   }
   .mobileNavigation a, .mobileNavigation summary {
@@ -1661,7 +1663,7 @@ h1 em { color: #00996d; font-weight: 700; }
   .distributionStrip { padding: 42px 22px; }
   .distributionHeading h2 { font-size: 14px; white-space: nowrap; }
   .distributionLogoSet { gap: 35px; padding-right: 35px; }
-  .siteFooter { min-height: 650px; background-position: 65% center; }
+  .siteFooter { min-height: 650px; background-position: 52% center; }
   .footerInner { width: calc(100% - 44px); min-height: 650px; padding: 55px 0 140px; }
   .footerContact > p, .footerContact h2 { font-size: 23px; }
   .innerHero { min-height: 560px; padding: 70px 22px; }
